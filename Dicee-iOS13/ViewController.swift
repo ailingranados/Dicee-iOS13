@@ -15,16 +15,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var diceImageView2: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //change the inicial number of the dice
-       
-    }
+   
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        print("Button tapped")
         
+        let diceArray =  [UIImage(named: "DiceOne"),
+                          UIImage(named: "DiceTwo"),
+                          UIImage(named: "DiceThree"),
+                          UIImage(named: "DiceFour"),
+                          UIImage(named: "DiceFive"),
+                          UIImage(named: "DiceSix")]
+        
+        print("Button tapped")
+        //random number of the array
+        diceImageView1.image = diceArray[Int.random(in: 1...5)]
+       
+        
+        diceImageView1.image = diceArray[Int.random(in: 1...5)]
         
     }
     
